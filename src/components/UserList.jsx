@@ -1,21 +1,21 @@
 import React from 'react'
-import { Table } from 'reactstrap'
 
 import UserListItem from './UserListItem'
 
-const UserList = (userList) => (
-  <Table>
+const UserList = ({userList}) => (
+  <table>
     <thead>
       <tr>
         <th>ID</th>
         <th>username</th>
         <th>email</th>
+        <th>permission</th>
       </tr>
     </thead>
     <tbody>
       { userList.map(userItem => <UserListItem userItem={userItem} key={userItem.id}/>)}
     </tbody>
-  </Table>
+  </table>
 )
 
 export default UserList
