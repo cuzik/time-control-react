@@ -1,9 +1,8 @@
 import React from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import Home from '../pages/Home'
-import Account from '../pages/Account'
+import Users from '../pages/Account/users'
 
 class Menu extends React.Component {
   constructor(props) {
@@ -24,10 +23,10 @@ class Menu extends React.Component {
     return (
       <Router>
         <div>
-          <Link to={'/account'}>Account</Link>
+          <Link to={'/users'}>Users</Link>
           <Link to={''}>Home</Link>
           <Switch>
-            <Route path='/account' component={ Account } />
+            <Route path='/users' component={ Users } />
             <Route path='' component={ Home } />
           </Switch>
         </div>
