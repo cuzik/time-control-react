@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import TemplatePage from './components/TemplatePage'
+import Routes from './routes';
 
 class App extends Component {
   render() {
     return (
-      <TemplatePage />
+      <div>
+        <Routes />
+      </div>
     )
   }
 }

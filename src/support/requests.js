@@ -1,7 +1,7 @@
-import API from './api';
+import api from '../services/api'
 
 const getUserList = () => (
-  API.get('users')
+  api.get('users')
 )
 
 export { getUserList }
