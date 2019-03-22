@@ -1,7 +1,7 @@
 import React from 'react'
 
 import UserList from './../../components/UserList'
-import {getUserList} from './../../support/requests'
+import { getUserList } from './../../support/requests'
 
 class Users extends React.Component{
   state = {
@@ -19,6 +19,7 @@ class Users extends React.Component{
   render() {
     return (
       <div>
+
         <UserList userList={this.state.userList}/>
       </div>
     )

@@ -19,11 +19,11 @@ class SignIn extends Component {
       this.setState({ error: "Preencha e-mail e senha para continuar!" })
     } else {
       api.post("/users/sign_in", { user: { email, password } }).then((res) => {
-        login(response.data.token)
+        login(res.headers.authorization)
         this.props.history.push("/")
       }).catch ((err) => {
         this.setState({
-          error: "Houve um problema com o login, verifique suas credenciais. T.T"
+          error: `Houve um problema com o login, verifique suas credenciais. T.T ${err}`
         })
       })
     }
